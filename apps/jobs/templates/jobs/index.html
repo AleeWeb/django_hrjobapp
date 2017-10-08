@@ -7,7 +7,34 @@
 	</style>
 </head>
 <body>
+
+	<h3>Enter job vacancies</h3>
 	
+	<form action='{% url "job:create" %}' method='post'>
+		{% csrf_token %}
+
+		<input type="text" name="job-title" placeholder="Job Title"></input>
+		<br>
+		<textarea name="job-desc" placeholder="Enter Job Description"></textarea><br>
+		
+		<input type="submit"></input>
+	</form>
+
+	<table>
+		<tr>
+			<th>Job ID #</th>
+			<th>Job Title</th>
+			<th>Job Description</th>
+			<th>Post Date</th>
+		</tr>
+		{% for obj in all_objects %}
+		<tr>
+				<th>{{ obj.id}}</th>
+				<th>{{ obj.job_title}}</th>
+				<th>{{ obj.job_desc}}</th>
+				<th>{{ obj.post_date}}</th>
+		</tr>
+	</table>
 
 </body>
 </html>
