@@ -11,8 +11,8 @@ def index(request):
 
 def create(request):
     if request.method == 'POST':
-        addJobs.objects.create(job_title=request.POST['job_title'], job_descp=request.POST['job_descp'])
-        return redirect('jobs/index.html')
+        addJob.objects.create(job_title=request.POST['job_title'], job_descp=request.POST['job_descp'])
+        return redirect('job:index')
 
 def delete(request):
     	return redirect('jobs/index.html')

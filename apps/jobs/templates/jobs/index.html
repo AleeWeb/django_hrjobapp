@@ -27,13 +27,14 @@
 			<th>Job Description</th>
 			<th>Post Date</th>
 		</tr>
-		{% for obj in AddJobs %}
+		{% for obj in addJob %}
 		<tr>
 				<th>{{ obj.id}}</th>
 				<th>{{ obj.job_title}}</th>
 				<th>{{ obj.job_descp}}</th>
 				<th>{{ obj.post_date}}</th>
 		</tr>
+		{% endfor %} 
 	</table>
 
 </body>
