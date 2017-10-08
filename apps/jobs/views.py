@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from django.shortcuts import render
-from .models import addJobs
+from .models import addJob
 
 def index(request):
     context = {
-		"jobs": addJobs.objects.all()
+		"addJobs": addJob.objects.all()
 	}
-    return render(request, 'jobs/index.html')
+    return render(request, 'job:index.html')
 
 def create(request):
     if request.method == 'POST':
