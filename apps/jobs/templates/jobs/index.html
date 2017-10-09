@@ -13,19 +13,46 @@
 </head>
 <body>
 
+		<nav class="navbar navbar-expand-lg navbar-dark bg-blue">
+				<a class="navbar-brand" href="#">Jobs, Inc.</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+				  <span class="navbar-toggler-icon"></span>
+				</button>
+			
+				<div class="collapse navbar-collapse" id="navbarColor02">
+				  <ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+					  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+					  <a class="nav-link" href="#">About Us</a>
+					</li>
+					<li class="nav-item">
+					  <a class="nav-link" href="#">Services</a>
+					</li>
+					<li class="nav-item">
+					  <a class="nav-link" href="#">Contact</a>
+					</li>
+				  </ul>
+				  <form class="form-inline">
+					<input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+					<button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
+				  </form>
+				</div>
+			  </nav>
+
 	<div id ="banner">
 		<div class="container">
-			<h2>Text</h2>
+			<h3 class="bg-text">HR Job Management Tool</h3>
 		</div>
 	</div>
 
 <div class="container">
-		
-		
+				
 		<form action="{% url 'job:create' %}" method='post'>
 			{% csrf_token %}
 			<div class="row formgrp">
-					<h5 class="form-instruct">Post job vacancy: </h5>
+					<h5 class="form-instruct">Post job information: </h5>
 
 				<input type="text" name="job_title" placeholder="Enter Job Title" class="txtform"></input> 
 				
@@ -56,5 +83,9 @@
 			{% endfor %} 
 		</table>
 </div>
+
+<footer>
+		Jobs, Inc. Django CRUD Demo &copy; 2017
+	</footer>
 </body>
 </html>

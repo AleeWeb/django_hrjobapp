@@ -2,13 +2,25 @@
 body {
     width: 100%;
     margin: 0 auto;
+    color: #444 !important;
 }
 
 #banner {
-    background: url('') center center no-repeat;
+    background: url('https://i.imgur.com/GFilNN5.jpg') center center no-repeat;
     background-size: cover;
+    background-position-x: -95px;
+    min-height: 300px;
+    position: relative;
+    margin-bottom: 40px;
 }
 
+.bg-text{
+    position: relative;
+    top: 120px;
+    margin-left: 238px;
+}
+
+/* Form */
 input,textarea {
    /* padding: .5rem .75rem;*/
     font-size: 1rem;
@@ -34,22 +46,51 @@ margin-right: 10px;
    margin-bottom: 20px;
 }
 
+.form-instruct {
+    margin-top: 7px;
+    margin-right: 7px;
+}
+
+/* End of Form */
 
 /* Change the bootstrap default striped color class */
 .table-striped tbody tr:nth-of-type(odd) {
     background-color: #e6f7ff !important;
 }
 
-/* button*/
+td {
+    font-size: 14px;
+}
+
+/* buttons */
 .aqua-gradient {
+    background: #2096ff;
     background: -webkit-linear-gradient(50deg,#2096ff,#05ffa3);
     background: linear-gradient(40deg,#2096ff,#05ffa3);
     -webkit-transition: .5s ease;
     transition: .5s ease;
+    color: #fff;
 }
 
-
-.form-instruct {
-    margin-top: 7px;
-    margin-right: 7px;
+.aqua-gradient:hover {
+    color: yellow;
 }
+
+.btn-outline-secondary {
+    border-color: #fff !important;
+    color: #fff !important;
+}
+
+.bg-blue{
+    background-color: #0033CC;
+}
+
+footer {
+    background-color: #0033CC;
+    color: #fff;
+    width: 100%;
+    height: 60px;
+    margin-top: 20px;
+    padding: 15px;
+}
+
