@@ -21,14 +21,14 @@ def edit(request, id):
 	return render(request, 'jobs/edit.html', context=context)
 
 def update(request, id):
-	errors = User.objects.validator(request.POST, "update")
+	errors = addJob.objects.validator(request.POST, "update")
 	if len(errors):
 		for error in errors.itervalues():
 			messages.error(request, error)
-		return redirect("/addJob/"+id+"/edit")
+		return redirect("/addJob/"+id+"jobs/edit.html")
 	else:
 		addJob.objects.create(job_title=request.POST['job_title'], job_descp=request.POST['job_descp'])
-		return redirect("/addJob/"+id)
+		return redirect("/addJob/"+id +"jobs/edit.html")
 
 def delete(request,id):
     if addJob.objects.filter(id=id).exists():
