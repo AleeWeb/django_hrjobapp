@@ -3,39 +3,56 @@
 <head>
 	<meta charset="utf-8">
 	<title>HR Job Post Tool</title>
-	<style>
-	</style>
+
+	{% load static %}
+
+	<link rel="stylesheet" href="{% static 'jobs/css/style.css' %}">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
 </head>
 <body>
 
-	<h3>Enter job vacancies</h3>
-	
-	<form action="{% url 'job:create' %}" method='post'>
-		{% csrf_token %}
+	<div id ="banner">
+		<div class="container">
+			<h2>Text</h2>
+		</div>
+	</div>
 
-		<input type="text" name="job_title" placeholder="Job Title"></input>
-		<br>
-		<textarea name="job_descp" placeholder="Enter Job Description"></textarea><br>
+<div class="container">
+		<h4>Enter job details.</h4>
 		
-		<input type="submit"></input>
-	</form>
+		<form action="{% url 'job:create' %}" method='post'>
+			{% csrf_token %}
+			<div class="row formgrp">
+				<input type="text" name="job_title" placeholder="Job Title" class="txtform"></input> 
+				
+				<textarea name="job_descp" placeholder="Enter Job Description" class="txtform"></textarea> 
+				
+				<input type="submit"></input>
+			</div>
+		</form>
 
-	<table>
-		<tr>
-			<th>Job ID #</th>
-			<th>Job Title</th>
-			<th>Job Description</th>
-			<th>Post Date</th>
-		</tr>
-		{% for obj in addJobs %}
-		<tr>
-				<th>{{ obj.id}}</th>
-				<th>{{ obj.job_title}}</th>
-				<th>{{ obj.job_descp}}</th>
-				<th>{{ obj.post_date}}</th>
-		</tr>
-		{% endfor %} 
-	</table>
 
+
+		<table class="table-striped table-responsive">
+			<tr>
+				<th style="width: 90px;">Job ID #</th>
+				<th>Job Title</th>
+				<th>Job Description</th>
+				<th>Post Date</th>
+				<th>Delete</th>		
+			</tr>
+			{% for obj in addJobs %}
+			<tr>
+					<td>{{ obj.id}}</td>
+					<td>{{ obj.job_title}}</td>
+					<td style="padding-right: 6px;">{{ obj.job_descp}}</td>
+					<td width="100">{{ obj.post_date}}</td>
+					<td width="100"><a href='{% url "job:delete" obj.id %}'>Delete Post</a></td>
+			</tr>
+			{% endfor %} 
+		</table>
+</div>
 </body>
 </html>

@@ -15,4 +15,4 @@ class jobPoster(models.Manager):
 class addJob(models.Model):
     job_title = models.CharField(max_length = 255)
     job_descp = models.CharField(max_length = 500)
-    post_date = models.DateTimeField(auto_now_add = True)
+    post_date = models.DateField(auto_now_add = True)

@@ -1,0 +1,37 @@
+
+body {
+    width: 100%;
+    margin: 0 auto;
+}
+
+#banner {
+    background: url('') center center no-repeat;
+    background-size: cover;
+}
+
+input,textarea {
+   /* padding: .5rem .75rem;*/
+    font-size: 1rem;
+    line-height: 1.25;
+    background-color: #fff;
+    background-image: none;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: .25rem;
+}
+
+.txtform {
+margin-right: 10px;
+}
+
+.forgrm {
+   position: relative;
+   display: block;
+   margin: 0 auto;
+}
+
+
+/* Change the bootstrap default striped color class */
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #e6f7ff !important;
+}
