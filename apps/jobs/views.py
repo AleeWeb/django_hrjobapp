@@ -7,12 +7,15 @@ def index(request):
     context = {
         "addJobs": addJob.objects.all()
 	}
-    return render(request, 'jobs/index.html')
+    return render(request, 'jobs/index.html', context=context)
 
-def create(request):
+def create(request, id):
     if request.method == 'POST':
         addJob.objects.create(job_title=request.POST['job_title'], job_descp=request.POST['job_descp'])
         return redirect('job:index')
 
 def delete(request):
-    	return redirect('jobs/index.html')
+    if addJob.objects.filter(id=id).exists():
+        addJob.objects.get(id=id).delete()
+    
+    return redirect('job:index')

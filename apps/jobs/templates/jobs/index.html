@@ -10,7 +10,7 @@
 
 	<h3>Enter job vacancies</h3>
 	
-	<form action='{% url "job:create" %}' method='post'>
+	<form action="{% url 'job:create' %}" method='post'>
 		{% csrf_token %}
 
 		<input type="text" name="job_title" placeholder="Job Title"></input>
