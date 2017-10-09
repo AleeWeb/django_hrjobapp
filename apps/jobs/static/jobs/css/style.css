@@ -5,7 +5,7 @@ body {
     color: #444 !important;
 }
 
-#banner {
+#home-banner {
     background: url('https://i.imgur.com/GFilNN5.jpg') center center no-repeat;
     background-size: cover;
     background-position-x: -95px;
@@ -20,6 +20,7 @@ body {
     margin-right: 290px;
     text-align: center;
 }
+
 
 /* Form */
 input,textarea {
@@ -99,9 +100,18 @@ footer {
 
 /* Edit job post page */
 
+#editpg-banner {
+    background: url('https://i.imgur.com/OCahWP1.jpg') center center no-repeat;
+    background-size: cover;
+    min-height: 300px;
+    position: relative;
+    margin-bottom: 40px;
+    top: -10px;
+}
+
 .editpg {
     position: relative;
-    top: 90px;
+    
     margin: 0 auto;
     display: block;
 }
