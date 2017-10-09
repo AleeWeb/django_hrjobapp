@@ -51,14 +51,14 @@
 			<p>{{ x.message }}</p>
 		{% endfor %}
 	{% endif %}
-	<form action="{/jobPoster/{{ obj.id }}/update}" method="POST">
+	<form action="{/addJob/{{ obj.id }}/update}" method="POST">
 		{% csrf_token %}
 
 		<label>Job Title:</label>
-		<input type="text" name="job_title" placeholder="Edit Job Title" value="{{ obj.job_title}}"><br>
+		<input type="text" name="job_title" placeholder="Edit Job Title" value="{{ addJobs.job_title}}" width="100%" id="title-edit"><br>
 <br>
 		<label>Job Description:</label><br>
-		<textarea id="edit-textarea" name="job_descp" placeholder="Enter Job Description" class="txtform" placeholder="Edit description" value="{{ obj.job_descp}}"></textarea><br>
+		<textarea id="edit-textarea" name="job_descp" placeholder="Enter Job Description" class="txtform" placeholder="Edit description" value="{{ addJobs.job_descp}}"></textarea><br>
 	</form>
 
 		<div class="row">

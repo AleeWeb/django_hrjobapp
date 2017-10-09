@@ -134,3 +134,7 @@ margin-right: 30px;
 .main-txt {
     margin-bottom: 20px;
 }
+
+#title-edit {
+    width: 200px !important;
+}
