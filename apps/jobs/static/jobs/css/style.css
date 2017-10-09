@@ -36,6 +36,7 @@ input,textarea {
 
 #home-textarea{
     height: 38px;
+    padding-top: 5px;
 }
 
 .txtform {
@@ -100,7 +101,7 @@ footer {
 
 /* Edit job post page */
 
-#editpg-banner {
+#secondary-banner {
     background: url('https://i.imgur.com/OCahWP1.jpg') center center no-repeat;
     background-size: cover;
     min-height: 300px;

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Edit Job Post</title>
+	<title>Preview Update</title>
 	{% load static %}
 	<link rel="stylesheet" href="{% static 'jobs/css/style.css' %}">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
@@ -43,36 +43,18 @@
 	</div>
 
 
-	<div class="container editpg">
-	<h3 class="main-txt">Edit Job Post {{ id }}</h3>
-	{% if messages %}
-		{% for x in messages %}
-			<p>{{ x.message }}</p>
-		{% endfor %}
-	{% endif %}
-	<form action="{{ addJobs.id }}" method="POST">
-		{% csrf_token %}
 
-		<label>Job Title:</label>
-		<input type="text" name="job_title" placeholder="Edit Job Title" value="{{ addJobs.job_title}}" width="100%" id="title-edit"><br>
-<br>
-		<label>Job Description:</label><br>
-		<textarea id="edit-textarea" name="job_descp" placeholder="Enter Job Description" class="txtform" placeholder="Edit description" value="{{ addJobs.job_descp}}"></textarea><br>
-	</form>
+	<div class="container">
+		<h3>Preview Update</h3><br>
+	<h4>Job Title: {{ addJobs.job_title}}</h4>
+	<p>Job Description: {{ addJobs.job_descp}}</p>
 
-		<div class="row">
-
-			<span>
-
-		<a href='{% url "job:show" addJobs.id %}' value="update" role="button" class="btn aqua-gradient" id="update-btn">Update</a>
-Update and Preview
-</span>
-
-	</div>
+	<a href="/" class="btn aqua-gradient" role="button">Go Back</a>
 </div>
 
 <footer>
 		Jobs, Inc. Django CRUD Demo &copy; 2017
 	</footer>
+	
 </body>
 </html>
