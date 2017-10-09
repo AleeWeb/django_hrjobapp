@@ -15,23 +15,41 @@ input,textarea {
     line-height: 1.25;
     background-color: #fff;
     background-image: none;
-    background-clip: padding-box;
+   /* background-clip: padding-box;*/
     border: 1px solid rgba(0,0,0,.15);
     border-radius: .25rem;
+}
+
+textarea {
+    height: 38px;
 }
 
 .txtform {
 margin-right: 10px;
 }
 
-.forgrm {
+.formgrp {
    position: relative;
-   display: block;
-   margin: 0 auto;
+   left: 14px !important;
+   margin-bottom: 20px;
 }
 
 
 /* Change the bootstrap default striped color class */
 .table-striped tbody tr:nth-of-type(odd) {
     background-color: #e6f7ff !important;
+}
+
+/* button*/
+.aqua-gradient {
+    background: -webkit-linear-gradient(50deg,#2096ff,#05ffa3);
+    background: linear-gradient(40deg,#2096ff,#05ffa3);
+    -webkit-transition: .5s ease;
+    transition: .5s ease;
+}
+
+
+.form-instruct {
+    margin-top: 7px;
+    margin-right: 7px;
 }
