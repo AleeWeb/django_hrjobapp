@@ -9,12 +9,12 @@ def index(request):
 	}
     return render(request, 'jobs/index.html', context=context)
 
-def create(request, id):
+def create(request):
     if request.method == 'POST':
         addJob.objects.create(job_title=request.POST['job_title'], job_descp=request.POST['job_descp'])
         return redirect('job:index')
 
-def delete(request):
+def delete(request,id):
     if addJob.objects.filter(id=id).exists():
         addJob.objects.get(id=id).delete()
     
