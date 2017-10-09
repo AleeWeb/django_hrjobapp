@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit Job Post</title>
+</head>
+<body>
+	<h1>Edit User {{ id }}</h1>
+	{% if messages %}
+		{% for x in messages %}
+			<p>{{ x.message }}</p>
+		{% endfor %}
+	{% endif %}
+	<form action="/users/{{ user.id }}/update" method="POST">
+		{% csrf_token %}
+		<label>Job Title:</label>
+		<input type="text" name="job_title" value="{{ obj.job_title}}">
+		<label>Job Description:</label>
+		<input type="text" name="job_descp" value="{{ obj.job_descp}}">
+		<label>Email:</label>
+		<input type="text" name="email" value="{{ user.email }}">
+		<input type="submit" value="Update">
+	</form>
+	<a href="/">Go Back</a>
+</body>
+</html>

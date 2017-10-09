@@ -70,6 +70,7 @@
 				<th>Job Title</th>
 				<th>Job Description</th>
 				<th>Post Date</th>
+				<th>Edit</th>
 				<th>Delete</th>		
 			</tr>
 			{% for obj in addJobs %}
@@ -78,7 +79,8 @@
 					<td>{{ obj.job_title}}</td>
 					<td style="padding-right: 6px;">{{ obj.job_descp}}</td>
 					<td width="100">{{ obj.post_date}}</td>
-					<td width="100"><a href='{% url "job:delete" obj.id %}'>Delete Post</a></td>
+					<td><a href='{% url "job:edit" obj.id %}'>Edit</a></td>
+					<td><a href='{% url "job:delete" obj.id %}'>Delete</a></td>
 			</tr>
 			{% endfor %} 
 		</table>
