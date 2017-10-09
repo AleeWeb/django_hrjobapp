@@ -1,4 +1,4 @@
 # django_hrjobapp
-This is a Python DJANGO human resources job posting app tool. The basic CRUD (create, read, update and delete).
+This is a Python DJANGO human resources job posting app tool. The basic CRUD (create, read, update and delete). Post, edit and delete job titles and descriptions.
 
-Completion pending...
+<img src="http://aliciaworks.com/images/django-job-apptool.jpg" alt="Screenshot of App" />
