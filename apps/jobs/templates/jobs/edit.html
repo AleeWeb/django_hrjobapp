@@ -51,7 +51,7 @@
 	{% endif %}
 
 
-	<form action="{{ addJobs.id }}" method="POST">
+	<form action="{{ addJobs.id }}/update" method="POST">
 		{% csrf_token %}
 
 		<label>Job Title:</label>
