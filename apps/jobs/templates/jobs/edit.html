@@ -51,14 +51,14 @@
 	{% endif %}
 
 
-	<form action="{% url 'jobs:update' id=addJobs.id %}" method="POST">
+	<form action="{% url 'jobs:update' id=Occupations.id %}" method="POST">
 		{% csrf_token %}
 
 		<label>Job Title:</label>
-		<input type="text" name="job_title" placeholder="Edit Job Title" value="{{ addJobs.job_title}}" width="100%" id="title-edit"><br>
+		<input type="text" name="job_title" placeholder="Edit Job Title" value="{{ Occupations.job_title}}" width="100%" id="title-edit"><br>
 <br>
 		<label>Job Description:</label><br>
-		<textarea id="edit-textarea" name="job_descp" placeholder="Enter Job Description" class="txtform" placeholder="Edit description">{{ addJobs.job_descp }}</textarea><br>
+		<textarea id="edit-textarea" name="job_descp" placeholder="Enter Job Description" class="txtform" placeholder="Edit description">{{ Occupations.job_descp }}</textarea><br>
 	
 		<div class="row">
 			

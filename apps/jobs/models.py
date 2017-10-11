@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 from django.db import models
 import re
 
-class jobPoster(models.Manager):
+class JobManager(models.Manager):
     def validator(self, post_data):
         errors = []
 
@@ -17,8 +17,8 @@ class jobPoster(models.Manager):
             )
         return new_job
 
-class addJob(models.Model):
+class Occupation(models.Model):
     job_title = models.CharField(max_length = 255)
     job_descp = models.CharField(max_length = 500)
     post_date = models.DateField(auto_now_add = True)
-    objects = jobPoster()
+    objects = JobManager()
