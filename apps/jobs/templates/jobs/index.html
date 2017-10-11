@@ -45,7 +45,7 @@
 
 <div class="container">
 				
-		<form action="{% url 'job:create' %}" method='post'>
+		<form action="{% url 'jobs:create' %}" method='post'>
 			{% csrf_token %}
 			<div class="row formgrp">
 					<h5 class="form-instruct">Post job information: </h5>
@@ -75,8 +75,8 @@
 					<td>{{ obj.job_title}}</td>
 					<td style="padding-right: 6px;">{{ obj.job_descp}}</td>
 					<td width="100">{{ obj.post_date}}</td>
-					<td><a href='{% url "job:edit" obj.id %}'>Edit</a></td>
-					<td><a href='{% url "job:delete" obj.id %}'>Delete</a></td>
+					<td><a href='{% url "jobs:edit" obj.id %}'>Edit</a></td>
+					<td><a href='{% url "jobs:delete" obj.id %}'>Delete</a></td>
 			</tr>
 			{% endfor %} 
 		</table>

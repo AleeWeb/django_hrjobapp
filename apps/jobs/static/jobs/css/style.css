@@ -73,17 +73,17 @@ td {
     background: linear-gradient(40deg,#2096ff,#05ffa3);
     -webkit-transition: .5s ease;
     transition: .5s ease;
-    color: #fff;
+    color: #DDD;
     text-shadow: 2px 2px rgba(0,0,0,.15);
 }
 
 .aqua-gradient:hover {
-    color: yellow;
+    color: #fff;
 }
 
 .btn-outline-secondary {
     border-color: #fff !important;
-    color: #fff !important;
+    color: #DDD!important;
 }
 
 .bg-blue{

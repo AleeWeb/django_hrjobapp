@@ -12,7 +12,7 @@ def index(request):
 def create(request):
     if request.method == 'POST':
         addJob.objects.create(job_title=request.POST['job_title'], job_descp=request.POST['job_descp'])
-        return redirect('job:index')
+        return redirect('jobs:index')
 
 def edit(request, id):
 	context = {
@@ -21,15 +21,15 @@ def edit(request, id):
 	return render(request, 'jobs/edit.html', context=context)
 
 def update(request, id):
-	errors = addJob.objects.validator(request.POST, "update")
+	print request.POST["job_descp"]
+	errors = addJob.objects.validator(request.POST)
 	if len(errors):
 		for error in errors.itervalues():
 			messages.error(request, error)
-		return redirect("/addJobs/"+id+"/edit")
+		return redirect(id+"/edit")
 	else:
 		addJob.objects.filter(id=int(id)).update(job_title=request.POST['job_title'], job_descp=request.POST['job_descp'])
-		return redirect("/addJobs/"+id)
-	return redirect("/addJobs/"+id +"jobs/show.html")
+		return redirect("jobs:show", id=id)
 
 def show(request, id):
 	context = {
@@ -41,4 +41,4 @@ def delete(request,id):
     if addJob.objects.filter(id=id).exists():
         addJob.objects.get(id=id).delete()
     
-    return redirect('job:index')
+    return redirect('jobs:index')
