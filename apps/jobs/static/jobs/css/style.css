@@ -73,8 +73,7 @@ td {
     background: linear-gradient(40deg,#2096ff,#05ffa3);
     -webkit-transition: .5s ease;
     transition: .5s ease;
-    color: #DDD;
-    text-shadow: 2px 2px rgba(0,0,0,.15);
+    color: 	#F0F0F0;
 }
 
 .aqua-gradient:hover {
@@ -83,7 +82,7 @@ td {
 
 .btn-outline-secondary {
     border-color: #fff !important;
-    color: #DDD!important;
+    color: 	#F0F0F0 !important;
 }
 
 .bg-blue{
