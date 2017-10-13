@@ -1,141 +1,189 @@
-
 body {
-    width: 100%;
-    margin: 0 auto;
-    color: #444 !important;
+	width: 100%;
+	margin: 0 auto;
+	color: #444 !important;
 }
-
 #home-banner {
-    background: url('https://i.imgur.com/GFilNN5.jpg') center center no-repeat;
-    background-size: cover;
-    background-position-x: -95px;
-    min-height: 300px;
-    position: relative;
-    margin-bottom: 40px;
+	background: url('https://i.imgur.com/GFilNN5.jpg') center center no-repeat;
+	background-size: cover;
+	background-position-x: -95px;
+	min-height: 300px;
+	position: relative;
+	margin-bottom: 40px;
 }
-
-.bg-text{
-    position: relative;
-    top: 105px;
-    margin-right: 290px;
-    text-align: center;
+.bg-text {
+	position: relative;
+	top: 105px;
+	margin-left: 290px;
 }
-
 
 /* Form */
-input,textarea {
-   /* padding: .5rem .75rem;*/
-    font-size: 1rem;
-    line-height: 1.25;
-    background-color: #fff;
-    background-image: none;
-   /* background-clip: padding-box;*/
-    border: 1px solid rgba(0,0,0,.15);
-    border-radius: .25rem;
-}
 
-#home-textarea{
-    height: 38px;
-    padding-top: 5px;
+input, textarea {
+	/* padding: .5rem .75rem;*/
+	font-size: 1rem;
+	line-height: 1.25;
+	background-color: #fff;
+	background-image: none;
+	/* background-clip: padding-box;*/
+	border: 1px solid rgba(0, 0, 0, .15);
+	border-radius: .25rem;
 }
-
+#home-textarea {
+	height: 38px;
+	padding-top: 5px;
+}
 .txtform {
-margin-right: 10px;
+	margin-right: 10px;
 }
-
 .formgrp {
-   position: relative;
-   left: 14px !important;
-   margin-bottom: 20px;
+	position: relative;
+	left: 14px !important;
+	margin-bottom: 20px;
 }
-
 .form-instruct {
-    margin-top: 7px;
-    margin-right: 7px;
+	margin-top: 7px;
+	margin-right: 7px;
 }
-
 
 /* End of Form */
 
-/* Change the bootstrap default striped color class */
-.table-striped tbody tr:nth-of-type(odd) {
-    background-color: #e6f7ff !important;
-}
 
+/* Change the bootstrap default striped color class */
+
+.table-striped tbody tr:nth-of-type(odd) {
+	background-color: #e6f7ff !important;
+}
 td {
-    font-size: 14px;
+	font-size: 14px;
 }
 
 /* buttons */
+
 .aqua-gradient {
-    background: #2096ff;
-    background: -webkit-linear-gradient(50deg,#2096ff,#05ffa3);
-    background: linear-gradient(40deg,#2096ff,#05ffa3);
-    -webkit-transition: .5s ease;
-    transition: .5s ease;
-    color: 	#F0F0F0;
+	background: #2096ff;
+	background: -webkit-linear-gradient(50deg, #2096ff, #05ffa3);
+	background: linear-gradient(40deg, #2096ff, #05ffa3);
+	-webkit-transition: .5s ease;
+	transition: .5s ease;
+	color: #F0F0F0;
 }
-
 .aqua-gradient:hover {
-    color: #fff;
+	color: #fff;
 }
-
 .btn-outline-secondary {
-    border-color: #fff !important;
-    color: 	#F0F0F0 !important;
+	border-color: #fff !important;
+	color: #F0F0F0 !important;
 }
-
-.bg-blue{
-    background-color: #0033CC;
+.bg-blue {
+	background-color: #0033CC;
 }
-
 footer {
-    width: 100%;
-    height: 60px;
-    position: relative;
-    margin-top: 119px;
-    padding: 15px;
-    background-color: #0033CC;
-    color: #fff;   
+	width: 100%;
+	height: 60px;
+	position: relative;
+	margin-top: 119px;
+	padding: 15px;
+	background-color: #0033CC;
+	color: #fff;
 }
 
 /* Edit job post page */
 
 #secondary-banner {
-    background: url('https://i.imgur.com/OCahWP1.jpg') center center no-repeat;
-    background-size: cover;
-    min-height: 300px;
-    position: relative;
-    margin-bottom: 40px;
-    top: -10px;
+	background: url('https://i.imgur.com/OCahWP1.jpg') center center no-repeat;
+	background-size: cover;
+	min-height: 300px;
+	position: relative;
+	margin-bottom: 40px;
+	top: -10px;
 }
-
 .editpg {
-    position: relative;
-    
-    margin: 0 auto;
-    display: block;
+	position: relative;
+	margin: 0 auto;
+	display: block;
 }
-
 #edit-textarea {
-   width: 400px;
-   height: 100px;
+	width: 400px;
+	height: 100px;
 }
-
 #update-btn {
-position: relative;
-left: 15px;
-margin-right: 30px;
+	position: relative;
+	left: 15px;
+	margin-right: 30px;
 }
-
 #goback-btn {
-    position: relative;
+	position: relative;
 }
-
 .main-txt {
-    margin-bottom: 20px;
+	margin-bottom: 20px;
+}
+#title-edit {
+	width: 200px !important;
 }
 
-#title-edit {
-    width: 200px !important;
+/*  Responsive code */
+
+@media screen and (min-device-width: 1300px) and (max-device-width: 1500px) {
+	.bg-text {
+		position: relative;
+		top: 105px;
+		margin-left: 232px;
+    }
+    
+    footer {
+		position: relative;
+		margin-top: 119px;
+	}
+}
+
+/* 1500 - 1680 */
+
+@media screen and (min-device-width: 1600px) and (max-device-width: 1680px) {
+
+	.bg-text {
+		position: relative;
+		top: 105px;
+		right: 60px;
+    }
+    
+	#home-banner {
+		background: url(https://i.imgur.com/GFilNN5.jpg) no-repeat;
+		background-size: cover;
+		/* background-position-x: -95px; */
+		min-height: 300px;
+		position: relative;
+		margin-bottom: 40px;
+    }
+    
+    footer {
+		position: relative;
+        position: relative;
+        top: 182px
+	}
+}
+
+/* 1820 - 1920 screens*/
+
+@media screen and (min-device-width: 1820px) and (max-device-width: 1920px) {
+
+	.bg-text {
+		position: relative;
+		top: 105px;
+		right: 130px;
+    }
+    
+	#home-banner {
+		background: url(https://i.imgur.com/GFilNN5.jpg) no-repeat;
+		background-size: cover;
+		/* background-position-x: -95px; */
+		min-height: 300px;
+		position: relative;
+		margin-bottom: 40px;
+    }
+    
+	footer {
+		position: relative;
+		top: 280px;
+	}
 }
