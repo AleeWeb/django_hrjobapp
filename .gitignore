@@ -30,5 +30,4 @@ nosetests.xml
 .idea
 .idea/*
 
-venv
 static
