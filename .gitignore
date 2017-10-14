@@ -26,7 +26,6 @@ coverage.*
 .tox
 nosetests.xml
 
-*.sql*
 
 .idea
 .idea/*
