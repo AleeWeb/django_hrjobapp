@@ -123,18 +123,30 @@ td {
 
 /* FOOTER */
 
+/*
+.navbar-fixed-bottom, .navbar-fixed-top {
+    position: fixed;
+    right: 0;
+    left: 0;
+	z-index: 1030;
+	bottom: 0;
+    margin-bottom: 0;
+    border-width: 1px 0 0;
+}*/
+
+
 footer {
 	width: 100%;
 	height: 60px;
 	position: relative;
-    left: 0;
+ left: 0;
     bottom: 0 !important;
-    width: 100%;
 	padding: 15px;
 	background-color: #0033CC;
 	color: #fff;
 	margin-top: 20px;
 }
+
 
 #footer2 {
 	width: 100%;
