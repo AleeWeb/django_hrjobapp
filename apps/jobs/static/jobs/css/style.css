@@ -1,4 +1,4 @@
-html, body {
+body {
 	width: 100%;
 	margin: 0 auto;
 	color: #444 !important;
@@ -6,6 +6,7 @@ html, body {
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
+	position: relative;
 }
 
 #home-banner {
@@ -138,8 +139,9 @@ td {
 footer {
 	width: 100%;
 	height: 60px;
-	position: relative;
- left: 0;
+	position: absolute; 
+	top:100%;
+ 	left: 0;
     bottom: 0 !important;
 	padding: 15px;
 	background-color: #0033CC;
@@ -148,18 +150,6 @@ footer {
 }
 
 
-#footer2 {
-	width: 100%;
-	height: 60px;
-	position: fixed;
-    left: 0;
-    bottom: 0 !important;
-    width: 100%;
-	padding: 15px;
-	background-color: #0033CC;
-	color: #fff;
-	margin-top: 30px;
-}
 
 footer a {
 	color: #00FFFF;
@@ -197,9 +187,7 @@ footer a:hover {
 		position: relative;
 		top: 105px;
 		margin-left: 232px;
-    }
-    
-    
+    }  
 }
 
 /* 1500 - 1680 */
@@ -220,13 +208,6 @@ footer a:hover {
 		position: relative;
 		margin-bottom: 40px;
     }
-	
-	footer {
-		position: relative;
-		bottom: 0px !important;
-		margin-top: 50px;
-	}
-  
 }
 
 /* 1820 - 1920 screens*/
@@ -247,11 +228,4 @@ footer a:hover {
 		position: relative;
 		margin-bottom: 40px;
     }
-	
-	footer {
-		position: fixed;
-		bottom: 0px !important;
-		margin-top: 150px;
-	}
-
 }
