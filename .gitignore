@@ -2,6 +2,8 @@
 
 # C extensions
 *.so
+venv/*
+*.save
 
 # Packages
 *.egg
