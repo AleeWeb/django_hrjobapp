@@ -10,7 +10,7 @@ body {
 }
 
 #home-banner {
-	background: url('https://i.imgur.com/GFilNN5.jpg') center center no-repeat;
+	background: url('/static/jobs/images/bg-main.jpg') center center no-repeat;
 	background-size: cover;
 	background-position-x: -95px;
 	min-height: 300px;
@@ -91,7 +91,7 @@ td {
 /* Edit job post page */
 
 #secondary-banner {
-	background: url('https://i.imgur.com/OCahWP1.jpg') center center no-repeat;
+	background: url('/static/jobs/images/bg-editpg.jpg') center center no-repeat;
 	background-size: cover;
 	min-height: 300px;
 	position: relative;
