@@ -1,42 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title>HR Job Management App</title>
-	{% load static %}
-	<link rel="stylesheet" href="{% static 'jobs/css/style.css' %}">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-</head>
-<body>
-		<nav class="navbar navbar-expand-lg navbar-dark bg-blue">
-				<a class="navbar-brand" href="#">Jobs, Inc.</a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
-				  <span class="navbar-toggler-icon"></span>
-				</button>
-			
-				<div class="collapse navbar-collapse" id="navbarColor02">
-				  <ul class="navbar-nav mr-auto">
-					<li class="nav-item active">
-					  <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-					</li>
-					<li class="nav-item">
-					  <a class="nav-link" href="#">About Us</a>
-					</li>
-					<li class="nav-item">
-					  <a class="nav-link" href="#">Services</a>
-					</li>
-					<li class="nav-item">
-					  <a class="nav-link" href="#">Contact</a>
-					</li>
-				  </ul>
-				  <form class="form-inline">
-					<input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-					<button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
-				  </form>
-				</div>
-			  </nav>
+{% extends 'jobs/base.html' %}
+{% block body %}
 
-	<div id ="home-banner">
+<div id ="home-banner">
 		<div class="container">
 			<h3 class="bg-text">Human Resources <br> Job Management</h3>
 		</div>
@@ -80,21 +45,4 @@
 			{% endfor %} 
 		</table>
 </div>
-
-
-<footer>
-	<div class="container">
-				<div class="row">
-				<div class="col-md-8">
-				Jobs, Inc. Django CRUD Demo &copy; 2017
-			</div>
-
-
-			<div class="col-md-4">
-				Created By <a href="http://www.aliciaworks.com/" target="_blank">Alicia Alexander</a>
-				</div>
-			</div>
-	</div>
-	</footer>
-</body>
-</html>
+{% endblock %}
