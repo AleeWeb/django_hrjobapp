@@ -201,9 +201,8 @@ footer a:hover {
     }
     
 	#home-banner {
-		background: url(https://i.imgur.com/GFilNN5.jpg) no-repeat;
+		background: url('/static/jobs/images/bg-main.jpg') no-repeat;
 		background-size: cover;
-		/* background-position-x: -95px; */
 		min-height: 300px;
 		position: relative;
 		margin-bottom: 40px;
@@ -221,7 +220,7 @@ footer a:hover {
     }
     
 	#home-banner {
-		background: url(https://i.imgur.com/GFilNN5.jpg) no-repeat;
+		background: url('/static/jobs/images/bg-main.jpg') no-repeat;
 		background-size: cover;
 		/* background-position-x: -95px; */
 		min-height: 300px;
