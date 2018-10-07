@@ -1,4 +1,5 @@
 
+import dj_database_url
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -13,8 +14,7 @@ SECRET_KEY = 'qoo+6mx7ldo99i*%0dgm1)=^m=aw(unwel(u*ut)a_xeqp$i39'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['34.234.84.126', '127.0.0.1']
-
+ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1', 'django-hr-crudapp.herokuapp.com']
 
 # Application definition
 
@@ -69,6 +69,9 @@ DATABASES = {
     }
 }
 
+db_from_env = dj_database_url.config()
+DATABASES['default'].update(db_from_env)
+
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
@@ -106,7 +109,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
