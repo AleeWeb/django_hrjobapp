@@ -1,1 +1,1 @@
-web: gunicorn django-hr-crudapp.wsgi --log-file -
+web: gunicorn django_hrjobapp.wsgi --log-file -
