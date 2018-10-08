@@ -21,7 +21,7 @@ def edit(request, id):
 	return render(request, 'jobs/edit.html', context=context)
 
 def update(request, id):
-	print request.POST["job_descp"]
+	print(request.POST["job_descp"])
 	errors = Occupation.objects.validator(request.POST)
 	if len(errors):
 		for error in errors.itervalues():
