@@ -87,6 +87,22 @@ td {
 	border-color: #fff !important;
 	color: #F0F0F0 !important;
 }
+<<<<<<< Updated upstream
+=======
+.bg-blue {
+	background-color: #0033CC;
+}
+footer {
+	width: 100%;
+	height: 60px;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: #0033CC;
+	color: #fff;
+}
+>>>>>>> Stashed changes
 
 /* Edit job post page */
 
@@ -187,7 +203,11 @@ footer a:hover {
 		position: relative;
 		top: 105px;
 		margin-left: 232px;
+<<<<<<< Updated upstream
     }  
+=======
+    }
+>>>>>>> Stashed changes
 }
 
 /* 1500 - 1680 */
